@@ -1,0 +1,30 @@
+<%- include("partials/header") -%>
+
+    <link href="css/signin.css" rel="stylesheet">
+</head>
+
+<body style="height:100vh">
+
+    <%- include("partials/navbar") -%>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <form class="form-signin">
+
+                    <h1 class="h3 mb-3 font-weight-normal text-center">Connexion</h1>
+                    <label for="inputPseudo" class="sr-only">Pseudo</label>
+                    <input type="text" id="inputPseudo" class="form-control" placeholder="Pseudo" required autofocus>
+                    <label for="inputPassword" class="sr-only">Mot de passe</label>
+                    <input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe" required>
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Valider</button>
+
+                </form>
+
+                <p class="text-center">Vous n'avez pas de compte ? <a href="/creerCompte">Créer un compte</a></p>
+
+            </div>
+        </div>
+    </div>
+
+<%- include("partials/footer") -%>

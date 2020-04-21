@@ -1,0 +1,56 @@
+<%- include("partials/header") -%>
+
+<link href="/css/consulter.css" rel="stylesheet">
+</head>
+
+<body>
+
+<%- include("partials/navbar") -%>
+
+<div class="container">
+
+
+    <div>
+        <h1 class="text-center"> <%= consulterJeu.titre %> </h1>
+    </div>
+    <div class="flex">
+        <div class="image flex">
+            <img src="<%= infoJeu.image %>" alt="Image du jeu">
+        </div>
+        <div class="flex ficheTechnique">
+            <p>Genre : <%= infoJeu.genre %> </p>
+            <p>De <%= infoJeu.nbJoueurMin %> à <%= infoJeu.nbJoueurMax %> joueur(s)</p>
+            <p>A partir de <%= infoJeu.age %> ans</p>
+            <p>Durée de <%= infoJeu.dureeMin %> à <%= infoJeu.dureeMax %> min</p>
+        </div>
+    </div>
+    <p class="description"><%= infoJeu.description %></p>
+    
+    <div class="vendeur">
+        <h3 class="text-center">Détails de la vente</h3>
+        <div class="flex">
+            <div>
+                <p>Langue : <%= consulterJeu.langue %> </p>
+                <p>Etat : <%= consulterJeu.etat %> </p>
+            </div>
+            <div>
+                <p>Vendu par : / Pseudo du vendeur ici /</p>
+                <h2> <%= consulterJeu.prix %> Euros</h2>
+            </div>
+        </div>
+        <p>Note du vendeur : <%= consulterJeu.precision %> </p>
+    </div>
+
+    <div class="flex">
+        <a href="/"><button class="btn btn-lg btn-primary">Contacter Vendeur</button></a>
+    </div>
+    <!-- <div class="flex">
+        <a href="/"><button class="btn btn-lg btn-info">Modifier Annonce</button></a>
+        <a href="/"><button class="btn btn-lg btn-danger">Supprimer</button></a>
+    </div> -->
+    <p class="text-center"><a href="/jeux"><button class="btn btn-lg btn-primary retour">Retour à la page recherche</button></a></p>
+
+
+</div>
+
+<%- include("partials/footer") -%>

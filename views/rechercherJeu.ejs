@@ -1,0 +1,35 @@
+<%- include("partials/header") -%>
+
+<link href="css/annonce.css" rel="stylesheet">
+</head>
+
+<%- include("partials/navbar") -%>
+
+<h1 class="text-center">Résultat de la recherche</h1>
+
+<div class="container">
+
+    <p class="text-center"> <%= nbResultat  %> Résultat(s) trouvé(s)</p>
+
+    <p class="text-center"><a href="/jeux"><button class="btn btn-lg btn-primary retour">Retour à la page recherche</button></a></p>
+
+    <% foundAnnonces.forEach(function(annonce) { %>
+
+        <div class="row">
+            <div class="annonce">
+                <h2> <%= annonce.titre %> </h2>
+                <h5> <%= annonce.prix %> €</h5>
+                <h6> Proposée par </h6>
+                <a href="/jeux/<%=annonce._id%>"><button class="btn btn-lg btn-primary btnAnnonce">Consulter</button></a>
+            </div>
+        </div>
+
+    <% }) %>
+
+
+  
+
+
+</div>
+
+<%- include("partials/footer") -%>

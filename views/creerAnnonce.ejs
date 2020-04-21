@@ -1,0 +1,51 @@
+<%- include("partials/header") -%>
+
+    <link href="css/signin.css" rel="stylesheet">
+</head>
+
+<body style="height:100vh">
+
+    <%- include("partials/navbar") -%>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                
+
+                <form action="/creerAnnonce" method="post">
+                    <h1 class="h3 mb-3 font-weight-normal text-center">Créer une annonce</h1>
+                    <div class="form-group">
+                        <label for="titre">Nom du jeu</label>
+                        <input type="text" class="form-control" id="titre" name="titre"required>
+                    </div>
+                    <div class="form-group">
+                        <label for="prix">Prix de vente</label>
+                        <input type="number" class="form-control" id="prix" name="prix" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="langue">Langue du jeu</label>
+                        <input type="text" class="form-control" id="langue" name="langue"required>
+                    </div>
+                    <div class="form-group">
+                        <label for="etat">Etat du jeu</label>
+                        <select type="text" class="form-control" id="etat" name="etat"required>
+                            <option value="Comme neuf">Comme neuf</option>
+                            <option value="Encore sous plastique">Encore sous plastique</option>
+                            <option value="Legerement usé">Legerement usé</option>
+                            <option value="Abimé ou composants manquants">Abimé ou composants manquants</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="precision">Précisions</label>
+                        <textarea class="form-control" id="precision" name="precision" rows="3"></textarea>
+                    </div>
+
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Valider</button>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+<%- include("partials/footer") -%>

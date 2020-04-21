@@ -1,0 +1,34 @@
+<%- include("partials/header") -%>
+
+<link href="css/annonce.css" rel="stylesheet">
+</head>
+
+<%- include("partials/navbar") -%>
+
+<h1 class="text-center">Trouver un jeu</h1>
+
+<form action="/rechercherJeu" method="post" class="text-center">
+    <input type="text" name="rechercher" id="rechercher" placeholder="Titre du jeu recherché">
+    <button type="submit">Chercher !</button>
+</form>
+
+<h4 class="text-center">Voici les 4 dernières annonces postées sur le site :</h4>
+
+<div class="container">
+
+<% foundAnnonces.forEach(function(annonce) { %>
+
+    <div class="row">
+        <div class="annonce">
+            <h2> <%= annonce.titre %> </h2>
+            <h5> <%= annonce.prix %> €</h5>
+            <h6> Proposée par </h6>
+            <a href="/jeux/<%=annonce._id%>"><button class="btn btn-lg btn-primary btnAnnonce">Consulter</button></a>
+        </div>
+    </div>
+
+<% }) %>
+
+</div>
+
+<%- include("partials/footer") -%>
